@@ -164,3 +164,9 @@ html:not([data-theme="light"]) .wr-pop{background:#161b20 !important;background-
 html:not([data-theme="light"]) .wr-pop-arrow{background:#161b20 !important;background-image:none !important;opacity:1}
 html:not([data-theme="light"]) .wr-pop-sum{color:#f1f3f5}
 html:not([data-theme="light"]) .wr-pop-det{color:#b9c0c7}
+/* Datacard readability for Korean text: word-unit wrapping, comfortable line length, legible small labels */
+.operative-card :is(.ability-card p,.ability-card h4,.weapon-table td,.operative-summary strong){word-break:keep-all;overflow-wrap:anywhere}
+.operative-card .ability-card p{text-wrap:pretty}
+.operative-card .ability-card p + p{margin-top:10px}
+@media(min-width:681px){.operative-card .ability-card p{font-size:15px;line-height:1.8}.operative-card .ability-card p:not(.restriction){max-width:50em}}
+@media(max-width:680px){.operative-card .stat-box span{font-size:11px !important}.operative-card .weapon-table td:nth-child(n+2):nth-child(-n+4)::before{font-size:11px}}
